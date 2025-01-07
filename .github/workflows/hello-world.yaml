@@ -8,7 +8,7 @@ jobs:
               uses: actions/checkout@v4
             - name: Echo text
               run: |
-               'echo "Hello world!"'
+               echo "Hello world!"
                whoami
                pwd
                ls
