@@ -13,6 +13,7 @@ jobs:
             - name: execute shell script
               run: ./.github/workflows/ascii-script.sh
     rkulkarni-test-1:
+        needs: rkulkarni-test
         runs-on: ubuntu-latest
         steps:
             - name: test
@@ -24,6 +25,7 @@ jobs:
             - name: execute shell script
               run: ./.github/workflows/ascii-script.sh
     rkulkarni-test-2:
+        needs: rkulkarni-test-1
         runs-on: ubuntu-latest
         steps:
             - name: test
