@@ -16,7 +16,7 @@ jobs:
                echo "composing a file" | tee -a test.out
                cat README.md
                pwd && ls
-               sudo yum install -y cowsay
+               sudo apt-get install -y cowsay
                sudo -i
             - name: generate ascii
               run: cowsay -f dragon "run for cover, I am a Dragon..RAWR" >> dragon.txt
