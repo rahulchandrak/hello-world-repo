@@ -7,7 +7,15 @@ jobs:
             - name: checkout repo
               uses: actions/checkout@v4
             - name: Echo text
-              run: 'echo "Hello world!"'
+              run: |
+               'echo "Hello world!"'
+               whoami
+               pwd
+               ls
+               df -hT
+               echo "composing a file" | tee -a test.out
+               cat README.md
+               pwd && ls
             - name: who are you
               run: whoami
             - name: where are you
