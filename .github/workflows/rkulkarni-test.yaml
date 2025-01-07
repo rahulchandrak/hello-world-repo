@@ -17,9 +17,12 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: test
-              run: whoami
-            - name: checkout
-              uses: actions/checkout@v4
+              run: echo "hi" > test.out
+            - name: upload
+              uses: actions/upload-artifact@v4
+              with:
+                name: my-artifact
+                path: test.out
             - name: list files
               run: ls -lrta && pwd && chmod +x ./.github/workflows/ascii-script.sh
             - name: execute shell script
@@ -31,7 +34,9 @@ jobs:
             - name: test
               run: whoami
             - name: checkout
-              uses: actions/checkout@v4
+              uses: actions/download-artifact@v4
+              with:
+                name: my-artifact
             - name: list files
               run: ls -lrta && pwd && chmod +x ./.github/workflows/ascii-script.sh
             - name: execute shell script
