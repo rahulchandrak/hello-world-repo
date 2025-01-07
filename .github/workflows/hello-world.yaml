@@ -4,6 +4,8 @@ jobs:
     hello-job:
         runs-on: ubuntu-latest
         steps:
+            - name: checkout repo
+              uses: actions/checkout@v4
             - name: Echo text
               run: 'echo "Hello world!"'
             - name: who are you
@@ -15,4 +17,6 @@ jobs:
             - name: compose a file
               run: echo "composing a file" | tee -a test.out
             - name: view the contents of the file
-              run: cat test.out 
+              run: cat test.out
+            - name: read a file from the repo
+              run: cat README.md
