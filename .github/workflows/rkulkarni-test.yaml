@@ -12,3 +12,25 @@ jobs:
               run: ls -lrta && pwd && chmod +x ./.github/workflows/ascii-script.sh
             - name: execute shell script
               run: ./.github/workflows/ascii-script.sh
+    rkulkarni-test-1:
+        runs-on: ubuntu-latest
+        steps:
+            - name: test
+              run: whoami
+            - name: checkout
+              uses: actions/checkout@v4
+            - name: list files
+              run: ls -lrta && pwd && chmod +x ./.github/workflows/ascii-script.sh
+            - name: execute shell script
+              run: ./.github/workflows/ascii-script.sh
+    rkulkarni-test-2:
+        runs-on: ubuntu-latest
+        steps:
+            - name: test
+              run: whoami
+            - name: checkout
+              uses: actions/checkout@v4
+            - name: list files
+              run: ls -lrta && pwd && chmod +x ./.github/workflows/ascii-script.sh
+            - name: execute shell script
+              run: ./.github/workflows/ascii-script.sh
