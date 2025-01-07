@@ -6,3 +6,13 @@ jobs:
         steps:
             - name: Echo text
               run: 'echo "Hello world!"'
+            - name: who are you
+              run: whoami
+            - name: where are you
+              run: pwd && ls
+            - name: what are your specifications
+              run: df -hT
+            - name: compose a file
+              run: echo "composing a file" | tee -a test.out
+            - name: view the contents of the file
+              run: cat test.out 
