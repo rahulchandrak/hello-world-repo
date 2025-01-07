@@ -20,3 +20,5 @@ jobs:
               run: cat test.out
             - name: read a file from the repo
               run: cat README.md
+            - name: checkout local contents again
+              run: pwd && ls
