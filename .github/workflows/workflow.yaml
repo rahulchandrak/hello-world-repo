@@ -1,0 +1,20 @@
+name: my-workflow
+on: push
+jobs:
+    my-job-1:
+        runs-on: ubuntu-latest
+        steps:
+            - name: whoami
+              run: whoami
+            - name: where am I
+              run: pwd
+            - name: create a file
+              run : echo "this is a test" | tee /tmp/test_file
+            - name: check the file
+              run : ls -lrt /tmp
+            - name: checkin the file
+              uses: actions/upload-artifact@v4
+              with:
+                name: my-test-file
+                path: /tmp/test_file
+            
