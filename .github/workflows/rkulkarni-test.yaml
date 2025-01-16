@@ -18,7 +18,7 @@ jobs:
         steps:
             
             - name: test
-              run: echo "hi" > test.out
+              run: echo "hi kodekloud" > test.out
             - name: upload
               uses: actions/upload-artifact@v4
               with:
